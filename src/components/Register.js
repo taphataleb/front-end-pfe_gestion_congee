@@ -30,34 +30,12 @@ const Register = ({loading,error,...props}) => {
 
   
 
-  // const baseURL = "http://localhost:8080/api/v1/auth/register"
 
      const handleSubmit = (e)=>{
        e.preventDefault();
      const empdata={firstname,lastname,email,password, role, NNI, matricule, phone_number};
     
-  //   console.log(empdata)
-
-  //   axios.post(baseURL, 
-  //     {
-  //       empdata
-  //     })
-  //     .then((response) => {
-  //       console.log(response);
-  //     })
-  //     .then(err => console.log(err));
-    
-
-      // fetch("http://localhost:8080/api/v1/auth/register",{
-      //   method:"POST",
-      //   headers:{"content-type":"application/json"},
-      //   body:JSON.stringify(empdata)
-      // }).then((res)=>{
-      //   console.log(JSON.stringify(empdata))
-      //   alert('Saved successfully.')
-      // }).catch((err)=>{
-      //   console.log(err)
-      // })
+  
       userRegister(empdata).then((response)=>{
 
         console.log("response",response);

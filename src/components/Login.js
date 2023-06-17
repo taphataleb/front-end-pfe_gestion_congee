@@ -18,72 +18,34 @@ const Login=({loading,error,...props})=>{
   const[password, setPassword]=useState("");
  
 
-//   const[active,activechange]=useState(true);
-//   const[validation,valchange]=useState(false);
-
   
 
-//   // const baseURL = "http://localhost:8080/api/v1/auth/register"
-
-//      const handleSubmit = (e)=>{
-//        e.preventDefault();
-//      const empdata={email , password};
-    
-//   //   console.log(empdata)
-
-//   //   axios.post(baseURL, 
-//   //     {
-//   //       empdata
-//   //     })
-//   //     .then((response) => {
-//   //       console.log(response);
-//   //     })
-//   //     .then(err => console.log(err));
+ 
+     const empdata={email , password};
     
 
-//       fetch("http://localhost:8080/api/v1/auth/login",{
-//         method:"POST",
-//         headers:{"content-type":"application/json"},
-//         body:JSON.stringify(empdata)
-//       }).then((res)=>{
-//         console.log(JSON.stringify(empdata))
-//         alert('Saved successfully.')
-//       }).catch((err)=>{
-//         console.log(err)
-//       })
-      
-//     setEmail("")
-//     setPassword("")
-    
-  
-//     }
 
 
 
 
 
-    const [values, setValues] = useState({
-        email: '',
-        password: ''
-        });
 
     const handleSubmit=(evt)=>{
         evt.preventDefault();
         //props.authenticate();
 
-        userLogin(values).then((response)=>{
+          userLogin(empdata).then((response)=>{
 
             console.log("response",response);
             if(response.status===200){
                 props.setUser(response.data);
-                props.history.push('/Navbar');
+                props.history.push('');
             }
              else{
                 props.loginFailure('Something Wrong!Please Try Again'); 
              }
 
-
-        }).catch((err)=>{
+            }).catch((err)=>{
 
             if(err && err.response){
             
@@ -103,8 +65,6 @@ const Login=({loading,error,...props})=>{
             // }
                 
 
-            
-
         });
         //console.log("Loading again",loading);
     setEmail("")
@@ -112,13 +72,7 @@ const Login=({loading,error,...props})=>{
         
     }
 
-    // const handleChange = (e) => {
-    //     e.persist();
-    //     setValues(values => ({
-    //     ...values,
-    //     [e.target.name]: e.target.value
-    //     }));
-    //   };
+    
       
 
     console.log("Loading ",loading);
