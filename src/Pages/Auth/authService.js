@@ -19,4 +19,6 @@ export const userRegister=(authRequest)=>{
         'url':`${process.env.hostUrl||'http://localhost:8080'}/api/v1/auth/register`,
         'data':authRequest
     })
+
 }
+

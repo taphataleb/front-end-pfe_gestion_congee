@@ -1,0 +1,63 @@
+.home-page {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    
+}
+.card-text{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.space{
+    margin-left: 0;
+}
+@media screen and (min-width: 768px) {
+    .space {
+            
+            margin-left: 130px;
+        }
+    }
+
+.card {
+    color: white;
+    
+    
+    width: 250px;
+    
+    height: 170px;
+    background-color: #f2f2f2;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accepted {
+    background-color: green;
+    
+}
+
+.rejected {
+    background-color: red;
+}
+.solde{
+    text-align: center;
+    background-color: rgb(3, 112, 112);
+   
+
+}
+.demande{
+    text-align: center;
+    background-color: rgb(219, 132, 19);
+}
+
+h2 {
+    margin-top: 50px;
+    font-size: 21px;
+    
+}
+

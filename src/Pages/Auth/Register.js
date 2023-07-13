@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useNavigate } from "react";
 //Icon
-import userIcon from "../img/user.svg";
-import emailIcon from "../img/email.svg";
-import passwordIcon from "../img/password.svg";
+import userIcon from "../../img/user.svg";
+import emailIcon from "../../img/email.svg";
+import passwordIcon from "../../img/password.svg";
 import styles from "./Register.module.css";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios"
@@ -11,7 +11,7 @@ import { ToastContainer} from "react-toastify";
 
 
 import { Link } from "react-router-dom";
-import { userRegister } from "../Service.js/authService";
+import { userRegister } from "./authService";
 
 
 const Register = ({loading,error,...props}) => {
