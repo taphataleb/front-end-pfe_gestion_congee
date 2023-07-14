@@ -10,19 +10,38 @@ const DemandeConge = () => {
   const [dateDebut, setDateDebut] = useState('');
   const [dateFin, setDateFin] = useState('');
   // const [motif, setMotif] = useState('');
-  
+  const baseUrl = "http://localhost:8080/demande/postDemande"
+    const token="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZXlhaEBnbWFpbC5jb20iLCJpYXQiOjE2ODkzMDU4NjUsImV4cCI6MTY4OTMwNzMwNX0.E9rIynKxNknbDZ5LRt48cDahIsKNbmvze1Iztmp_nvw"
+  const empdata = {dateDebut, dateFin}
+   const connect = axios.create({
+      baseURL: baseUrl,
+      headers:{
+        "Authorization":"Bearer " + token
+      }
+    })
+      
+  const postData =() =>{
+    console.log("empdata", empdata)
+   connect.post("",{
+    dateDebut:
+"2023-07-07",
+dateFin
+: 
+"2023-07-14"
+   
+   })
+    .then(res => {console.log(res) 
+    console.log("caled")})
+    .catch(err =>{console.log(err)
+    console.log("caled2")})
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     
-  const empdata = {dateDebut, dateFin}
-
-   axios.post("http://localhost:8080/demande/postDemande",{
-    empdata
-   
-   })
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
-  };
+  
+ 
+    
+  }
   // setDateDebut ("")
   // setDateFin ("")f
   
@@ -65,7 +84,7 @@ const DemandeConge = () => {
             required
           />
         </div> */}
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary" onClick={() =>postData()}>
           Soumettre
         </button>
       </form>

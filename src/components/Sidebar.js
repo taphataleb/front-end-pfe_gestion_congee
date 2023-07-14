@@ -3,6 +3,7 @@ import './Sidebar.css';
 import { Link } from 'react-router-dom';
 import Homepage from './Home';
 import { FaUser } from 'react-icons/fa';
+import HistoryIcon from '@mui/icons-material/History';
 
 const Sidebar = ({media,setMedia}) => {
   const [show, setShow] = useState(false);
@@ -25,22 +26,22 @@ const Sidebar = ({media,setMedia}) => {
         <nav className='nav'>
           <div>
             <Link to='/' className='nav-logo'>
-              <i className={`fas fa-home-alt nav-logo-icon`}></i>
+              <i className={`fas fa-user-check nav-logo-icon`}></i>
               <span className='nav-logo-name'>Status</span>
             </Link>
 
             <div className='nav-list'>
               
               <Link to='/historique' className='nav-link'>
-                <i className='fas fa-hotel nav-link-icon'></i>
+                <i className='fas fa-history nav-link-icon'></i>
                 <span className='nav-link-name'>Historique</span>
               </Link>
                <Link to='/demande' className='nav-link'>
-                <i className='fas fa-hotel nav-link-icon'></i>
+                <i className='fas fa-hand-paper nav-link-icon'></i>
                 <span className='nav-link-name'>Create demande</span>
               </Link>
                <Link to='/liste_des_demande' className='nav-link'>
-                <i className='fas fa-hotel nav-link-icon'></i>
+                <i class="fa-solid fa-list"></i>
                 <span className='nav-link-name'>List des demandes</span>
               </Link>
                <Link to='/AdminPage' className='nav-link'>

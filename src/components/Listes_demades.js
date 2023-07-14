@@ -9,12 +9,14 @@ const CongeList = () => {
   }, []);
 
   const fetchDemandesConge = async () => {
+
     try {
+        const baseUrl = "http://localhost:8080/demande/getallDemande"
+    const token="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkaWRpQGdtYWlsLmNvbSIsImlhdCI6MTY4OTI5ODI5NSwiZXhwIjoxNjg5Mjk5NzM1fQ.yMAnT_sM_grJnCk-b-h7OLKNrD9EnUgX7Og5CCx40SQ"
       const response = await axios.get('http://localhost:8080/demande/getallDemande');
       const data = await response.json();
-     
+      console.log(data)
       setDemandes(data);
-    
       
     } catch (error) {
       //console.log('Une erreur s\'est produite lors de la récupération des demandes de congé.', error);
