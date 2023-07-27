@@ -18,6 +18,14 @@ h1 {
     
 }
 
+h2 {
+
+    margin-bottom: 20px;
+    margin-left: 500px;
+    margin-top: 5px;
+
+
+}
 
 .form-group {
     
@@ -45,12 +53,13 @@ textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-left: 300px;
-    margin-top: 10px;
+    margin-left: 500px;
+    margin-top: 30px;
 }
 
 button[type="submit"] {
-    width: 60%;
+    margin-right: 600px;
+    max-width: 21%;
     margin-top: 15px;
     padding: 10px;
     background-color: #007bff;
@@ -59,7 +68,7 @@ button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
-    margin-left: 300px;
+    margin-left: 500px;
     margin-top: 15px;
     
 }

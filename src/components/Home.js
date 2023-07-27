@@ -17,7 +17,7 @@ const HomePage = ({media}) => {
 
   const fetchDemandesAcceptees = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/demandes?statut=accepte');
+      const response = await fetch('http://localhost:8080/api/getallCompteConge');
       const data = await response.json();
       setDemandesAcceptees(data);
     } catch (error) {

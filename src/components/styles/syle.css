@@ -1,0 +1,155 @@
+.container1 {
+    /* display: flex;
+    align-items: center; */
+    background-color: white;
+    width: 90%;
+    margin: 0% 20px 20px 60px;
+
+}
+
+td {
+    width: 15px;
+    height: 15px;
+
+}
+
+;
+
+.conge {
+    background-color: red;
+    margin-right: 300px;
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    margin-left: 300px;
+    margin-top: 1px;
+
+}
+
+.form-group {
+
+    text-align: center;
+    margin-left: 5000px;
+
+}
+
+label {
+    font-weight: bold;
+    margin-left: 300px;
+    margin-top: 10px;
+
+}
+
+input[type="date"],
+textarea {
+    margin-right: 600px;
+    max-width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    width: 60%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 300px;
+    margin-top: 15px;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #0069d9;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: rgb(210, 222, 225);
+    width: 100%;
+
+}
+
+.conge {
+    background-color: rgb(210, 222, 225);
+    margin-right: 300px;
+}
+
+h1 {
+
+    margin-bottom: 20px;
+    margin-left: 300px;
+    margin-top: 1px;
+
+
+}
+
+h2 {
+
+    margin-bottom: 20px;
+    margin-left: 500px;
+    margin-top: 1px;
+
+
+}
+
+.form-group {
+
+    text-align: center;
+    margin-left: 5000px;
+
+
+
+
+}
+
+label {
+    font-weight: bold;
+    margin-left: 300px;
+    margin-top: 10px;
+
+
+}
+
+input[type="date"],
+
+textarea {
+    margin-right: 600px;
+    max-width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 300px;
+    margin-top: 30px;
+};
+
+button[type="submit"] {
+    margin-right: 600px;
+    max-width: 21%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 300px;
+    margin-top: 15px;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #0069d9;
+}

@@ -178,6 +178,7 @@
   .formLogin {
     min-width: 300px;
     padding: 16px;
+    
   }
   .formLogin input[type="text"],
   .formLoginQ input[type="email"],
@@ -187,3 +188,12 @@
     padding: 10px 32px;
   }
 }
+
+
+ 
+
+
+ 
+
+
+ 

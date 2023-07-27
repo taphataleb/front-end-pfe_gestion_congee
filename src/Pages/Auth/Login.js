@@ -9,38 +9,59 @@
  import { useNavigate } from "react-router-dom";
  import React,{useState} from 'react';     
     
-//import { connect } from 'react-redux';
-//import { authenticate, authFailure, authSuccess } from '../redux/authActions';
-//import './loginpage.css';
+
 import {userLogin} from './authService'
-//import {Alert,Spinner} from 'react-bootstrap';
+import axios from "axios";
 
 const Login=({loading,error,...props})=>{
  
-  const[email,setEmail]=useState("");
-  const[password, setPassword]=useState("");
-  const navigate = useNavigate();
-  const empdata={email , password};
-  const handleSubmit=(evt)=>{
-        evt.preventDefault();
-        //props.authenticate();
+  // const[email,setEmail]=useState("");
+  // const[password, setPassword]=useState("");
+  // const navigate = useNavigate();
+  // const empdata={email , password};
+  // const handleSubmit=(evt)=>{
+  //       evt.preventDefault();
 
-          userLogin(empdata).then((response)=>{
+  //         userLogin(empdata).then((response)=>{
 
-            console.log("response",response);
-            navigate("/")
+  //           console.log("response",response);
+  //           navigate("/")
             
 
-        }).then (err => console.log(err))
-        //console.log("Loading again",loading);
-    setEmail("")
-    setPassword("")  
+  //       }).then (err => console.log(err))
+  
+  //   setEmail("")
+  //   setPassword("")  
         
+         //}
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:9000/api/v1/auth/login', {
+        email: email,
+        password: password,
+      });
+      // Assuming your backend returns a token upon successful login
+      // Store the token securely (e.g., in local storage)
+      localStorage.setItem('token', response.data.token);
+      // Navigate to the home page
+      navigate('/liste_des_demande');
+    } catch (error) {
+      console.error('Login failed', error);
     }
-    //console.log("Loading ",loading);
+  
+
+
+  };
+    
   return (
     <div className={styles.container} >
-      <form className={styles.formLogin}  onSubmit={handleSubmit} noValidate={false}  autoComplete="off">
+      <form className={styles.formLogin} onSubmit={handleLogin} noValidate={false}  autoComplete="off">
         <h2>Login</h2>
         <div>
           <div>
