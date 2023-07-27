@@ -38,19 +38,22 @@ function ValidationDemande() {
     
   
   return (
+    <div className="container ">
+
+      <div className='conge'>
     <form  onSubmit={handleSubmit}>
       <h2>AVIS DIRECTEUR</h2>
     
-      <div><input type rows="6" cols="30" onChange={(e)=>setAavis_directeur(e.target.value)}
+      <div><textarea  rows="6" cols="30" onChange={(e)=>setAavis_directeur(e.target.value)}
         value={avis_directeur} >
     
-  </input></div>
+  </textarea></div>
          
          <button type="submit" className="btn btn-primary" >
         approuver
       </button>
 
-         </form>
+         </form></div></div>
   );
 }
 

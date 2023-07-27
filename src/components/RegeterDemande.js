@@ -44,10 +44,10 @@ function RegisterDemande() {
     <form onSubmit={handleSubmit}>
 
   
-      <div  ><input  rows="6" cols="30" onChange={(e) => setAavis_directeur(e.target.value)}
+      <div  ><textarea  rows="6" cols="30" onChange={(e) => setAavis_directeur(e.target.value)}
         value={avis_directeur} >
 
-      </input></div>
+      </textarea></div>
       <button type="submit" className="btn btn-primary" >
         regete
       </button>
