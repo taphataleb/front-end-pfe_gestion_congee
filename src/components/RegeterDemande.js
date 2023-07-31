@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom';
-import "./styles/syle.css"
 
 function RegisterDemande() {
   const { id } = useParams();
@@ -36,22 +35,22 @@ function RegisterDemande() {
 
 
   return (
-    <div className="container ">
+    <div >
 
-      <div className='conge'>
+      <div >
 
         <h1>regetr</h1>
-    <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
 
-  
-      <div  ><textarea  rows="6" cols="30" onChange={(e) => setAavis_directeur(e.target.value)}
-        value={avis_directeur} >
 
-      </textarea></div>
-      <button type="submit" className="btn btn-primary" >
-        regete
-      </button>
-    </form></div></div>
+          <div  ><textarea rows="6" cols="30" onChange={(e) => setAavis_directeur(e.target.value)}
+            value={avis_directeur} >
+
+          </textarea></div>
+          <button  >
+            regete
+          </button>
+        </form></div></div>
   );
 }
 

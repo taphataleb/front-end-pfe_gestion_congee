@@ -1,20 +1,20 @@
 // import React, { useState } from "react";
 //import { useNavigate } from "react-router-dom";
- import emailIcon from "../../img/email.svg";
- import passwordIcon from "../../img/password.svg";
- import styles from "./Register.module.css";
- import { ToastContainer } from "react-toastify";
- import "react-toastify/dist/ReactToastify.css";
- import { Link } from "react-router-dom";
- import { useNavigate } from "react-router-dom";
- import React,{useState} from 'react';     
-    
+import emailIcon from "../../img/email.svg";
+import passwordIcon from "../../img/password.svg";
+import styles from "./Register.module.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
 
-import {userLogin} from './authService'
+
+import { userLogin } from './authService'
 import axios from "axios";
 
-const Login=({loading,error,...props})=>{
- 
+const Login = ({ loading, error, ...props }) => {
+
   // const[email,setEmail]=useState("");
   // const[password, setPassword]=useState("");
   // const navigate = useNavigate();
@@ -26,14 +26,14 @@ const Login=({loading,error,...props})=>{
 
   //           console.log("response",response);
   //           navigate("/")
-            
+
 
   //       }).then (err => console.log(err))
-  
+
   //   setEmail("")
   //   setPassword("")  
-        
-         //}
+
+  //}
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -54,24 +54,24 @@ const Login=({loading,error,...props})=>{
     } catch (error) {
       console.error('Login failed', error);
     }
-  
+
 
 
   };
-    
+
   return (
     <div className={styles.container} >
-      <form className={styles.formLogin} onSubmit={handleLogin} noValidate={false}  autoComplete="off">
+      <form className={styles.formLogin} onSubmit={handleLogin} noValidate={false} autoComplete="off">
         <h2>Login</h2>
         <div>
           <div>
-            <input type="text" name="email" value={email} onChange={e=>setEmail(e.target.value)}    placeholder="E-mail"  autoComplete="off" />
+            <input type="text" name="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="E-mail" autoComplete="off" />
             <img src={emailIcon} alt="" />
           </div>
         </div>
         <div>
           <div>
-            <input type="password" name="password"  placeholder="Password"value={password} onChange={e=>setPassword(e.target.value)}  autoComplete="off" />
+            <input type="password" name="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} autoComplete="off" />
             <img src={passwordIcon} alt="" />
           </div>
         </div>

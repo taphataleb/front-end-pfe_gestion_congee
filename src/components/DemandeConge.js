@@ -1,10 +1,6 @@
-import React, {useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
-
+import React, { useState } from 'react';
 import axios from 'axios';
-import {demande} from '../Pages/Auth/authService';
-import {Navigate, useNavigate} from "react-router-dom";
-import "./styles/syle.css"
+import '../styles/Styles.css';
 
 const DemandeConge = () => {
     const [dateDébut,
@@ -12,7 +8,7 @@ const DemandeConge = () => {
     const [dateFin,
         setDateFin] = useState("");
 
-    const handeleSaveDemande = async(e) => {
+    const handeleSaveDemande = async (e) => {
         e.preventDefault();
         let demande = {
             dateDébut,
@@ -38,22 +34,25 @@ const DemandeConge = () => {
 
     return (
 
-        <div className="container ">
+        <div  >
 
-            <div className='conge'>
+            <div className='container' >
 
                 <h1>Demande de congé</h1>
-          <form onSubmit={handeleSaveDemande} >
-            <div  > 
-              <label>Date de début :</label>
-              <input type="date"className="form-control"value={dateDébut}onChange={(e) => setDateDébut(e.target.value)} required/>
-            </div>
-            <div >
-              <label>Date de fin :</label>
-              <input type="date" className="form-control" value={dateFin} onChange={(e) => setDateFin(e.target.value)} required/>
-            </div>
-            <button type="submit" className="btn btn-primary"> Save </button>
-            </form>
+                <form onSubmit={handeleSaveDemande} >
+
+
+                    <div  >
+                        <label>Date de début :</label>
+                        <input type='text' value={dateDébut} onChange={(e) => setDateDébut(e.target.value)} required />
+                    </div>
+                    <div >
+
+                        <label>Date de fin :</label>
+                        <input type='text' value={dateFin} onChange={(e) => setDateFin(e.target.value)} required />
+                    </div>
+                    <button  > Save </button>
+                </form>
             </div>
 
         </div>
