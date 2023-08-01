@@ -36,7 +36,7 @@ const DemandeConge = () => {
 
         <div  >
 
-            <div className='container' >
+            <div className='containerinput' >
 
                 <h1>Demande de congé</h1>
                 <form onSubmit={handeleSaveDemande} >
@@ -44,14 +44,14 @@ const DemandeConge = () => {
 
                     <div  >
                         <label>Date de début :</label>
-                        <input type='text' value={dateDébut} onChange={(e) => setDateDébut(e.target.value)} required />
+                        <input type='date' value={dateDébut} onChange={(e) => setDateDébut(e.target.value)} required />
                     </div>
                     <div >
 
                         <label>Date de fin :</label>
-                        <input type='text' value={dateFin} onChange={(e) => setDateFin(e.target.value)} required />
+                        <input type='date' value={dateFin} onChange={(e) => setDateFin(e.target.value)} required />
                     </div>
-                    <button  > Save </button>
+                    <button type='submit'> Save </button>
                 </form>
             </div>
 

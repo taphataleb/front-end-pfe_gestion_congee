@@ -1,20 +1,34 @@
 body {
-    background-color: rgb(210, 201, 201);
+    background-color: rgba(248, 243, 243, 0.971);
 
 }
 
-.container {
+.containerinput {
+
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    border: 5px solid #49a09d;
-    border-bottom: 1px solid #49a09d;
+
+    border-collapse: collapse;
 
     padding: 20px;
     width: 50%;
-    margin-top: 20px;
 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    margin: auto;
+    margin: 80px auto;
+}
+
+.containerList {
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-collapse: collapse;
+
+    padding: 5px;
+    width: 90%;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    margin: 80px auto;
 }
 
 input[type=text],
@@ -35,6 +49,54 @@ input[type=password] {
     font-size: 18px;
     border-bottom: 1px solid #49a09d;
 }
+
+input[type=date] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #49a09d;
+    border-bottom: 0px solid #49a09d;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: center;
+    background: none;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid #49a09d;
+}
+
+button[type=submit] {
+    color: white;
+    padding: 12px 20px;
+    width: 50%;
+    border-radius: 15%;
+    cursor: pointer;
+    border: 3px solid #075a6a22;
+    margin-left: 25%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    background: #290177;
+    font-size: 18px;
+    border-bottom: 0px solid #1f1872;
+
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    margin-top: 30px;
+
+}
+
+h2 {
+    margin: auto;
+}
+
 
 /* .container1 {
      display: flex;

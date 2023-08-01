@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import '../styles/Styles.css';
 
 const Historique = () => {
   const [historiques, setHistoriques] = useState([])
@@ -16,7 +17,7 @@ const Historique = () => {
   },
     []);
   return (
-    <div >
+    <div className='containerList'>
 
       <h2>Historique des congés</h2>
 

@@ -4,30 +4,32 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-   
-    
+
+
 }
-.card-text{
+
+.card-text {
     text-align: center;
     font-size: 2rem;
 }
 
-.space{
+.space {
     margin-left: 0;
 }
+
 @media screen and (min-width: 768px) {
     .space {
-            
-            margin-left: 130px;
-        }
+
+        margin-left: 130px;
     }
+}
 
 .card {
     color: white;
-    
-    
+
+
     width: 250px;
-    
+
     height: 170px;
     background-color: #f2f2f2;
     margin: 10px;
@@ -38,26 +40,27 @@
 
 .accepted {
     background-color: green;
-    
+
 }
 
 .rejected {
     background-color: red;
 }
-.solde{
+
+.solde {
     text-align: center;
     background-color: rgb(3, 112, 112);
-   
+
 
 }
-.demande{
+
+.demande {
     text-align: center;
     background-color: rgb(219, 132, 19);
 }
 
-h2 {
+/* h2 {
     margin-top: 50px;
     font-size: 21px;
     
-}
-
+} */
