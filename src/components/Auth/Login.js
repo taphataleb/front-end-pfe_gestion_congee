@@ -2,7 +2,6 @@
 //import { useNavigate } from "react-router-dom";
 import emailIcon from "../../img/email.svg";
 import passwordIcon from "../../img/password.svg";
-import styles from "./Register.module.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
@@ -10,8 +9,9 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
 
 
-import { userLogin } from './authService'
 import axios from "axios";
+
+import Styles from '../../styles/Styles.css'
 
 const Login = ({ loading, error, ...props }) => {
 
@@ -60,26 +60,26 @@ const Login = ({ loading, error, ...props }) => {
   };
 
   return (
-    <div className={styles.container} >
-      <form className={styles.formLogin} onSubmit={handleLogin} noValidate={false} autoComplete="off">
+    <div className='containerinput'  >
+      <form onSubmit={handleLogin} noValidate={false} autoComplete="off">
         <h2>Login</h2>
         <div>
           <div>
             <input type="text" name="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="E-mail" autoComplete="off" />
-            <img src={emailIcon} alt="" />
+            {/* <img src={emailIcon} alt="" /> */}
           </div>
         </div>
         <div>
           <div>
             <input type="password" name="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} autoComplete="off" />
-            <img src={passwordIcon} alt="" />
+            {/* <img src={passwordIcon} alt="" /> */}
           </div>
         </div>
 
         <div>
           <button type="submit">Login</button>
-          <span style={{ color: "#a29494", textAlign: "center", display: "inline-block", width: "100%" }}>
-            Don't have a account? <Link to="/Register">Create account</Link>
+          <span style={{ color: "#a29494", textAlign: "center", display: "inline-block", width: "100%" }}><br></br>
+            <Link to="/Register">Create account</Link>Don't have a account?
           </span>
         </div>
       </form>

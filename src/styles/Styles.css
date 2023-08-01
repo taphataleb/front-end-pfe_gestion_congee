@@ -11,7 +11,7 @@ body {
     border-collapse: collapse;
 
     padding: 20px;
-    width: 50%;
+    width: 60%;
 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     margin: 80px auto;
@@ -25,10 +25,10 @@ body {
     border-collapse: collapse;
 
     padding: 5px;
-    width: 90%;
+    width: 85%;
 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    margin: 80px auto;
+    margin: 80px 0px 0px 200px;
 }
 
 input[type=text],
@@ -45,7 +45,7 @@ input[type=password] {
     border-top-right-radius: 15px;
     text-align: center;
     background: none;
-    color: white;
+    color: black;
     font-size: 18px;
     border-bottom: 1px solid #49a09d;
 }
@@ -63,7 +63,7 @@ input[type=date] {
     border-top-right-radius: 15px;
     text-align: center;
     background: none;
-    color: white;
+    color: black;
     font-size: 18px;
     border-bottom: 1px solid #49a09d;
 }
@@ -71,15 +71,23 @@ input[type=date] {
 button[type=submit] {
     color: white;
     padding: 12px 20px;
-    width: 50%;
-    border-radius: 15%;
+    width: 30%;
+    border-radius: 5%;
     cursor: pointer;
-    border: 3px solid #075a6a22;
-    margin-left: 25%;
+    border: 3px solid #66a3ff;
+    margin-left: 35%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-    background: #290177;
-    font-size: 18px;
-    border-bottom: 0px solid #1f1872;
+    background: #66a3ff;
+
+    border-bottom: 0px solid #66a3ff;
+
+}
+
+Link {
+    color: rgb(166, 20, 20);
+
+    background: #66a3ff;
+
 
 
 }
@@ -97,6 +105,25 @@ h2 {
     margin: auto;
 }
 
+
+textarea[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #49a09d;
+    border-bottom: 0px solid #49a09d;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-left: 65px;
+    box-sizing: border-box;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: center;
+    background: none;
+    color: black;
+    font-size: 18px;
+    border-bottom: 1px solid #49a09d;
+}
 
 /* .container1 {
      display: flex;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom';
-
+import '../styles/Styles.css';
 function RegisterDemande() {
   const { id } = useParams();
   const [avis_directeur, setAavis_directeur] = useState("");
@@ -35,7 +35,7 @@ function RegisterDemande() {
 
 
   return (
-    <div >
+    <div className='containerinput' >
 
       <div >
 
@@ -43,11 +43,11 @@ function RegisterDemande() {
         <form onSubmit={handleSubmit}>
 
 
-          <div  ><textarea rows="6" cols="30" onChange={(e) => setAavis_directeur(e.target.value)}
+          <div  ><textarea type="text" rows="6" cols="30" onChange={(e) => setAavis_directeur(e.target.value)}
             value={avis_directeur} >
 
           </textarea></div>
-          <button  >
+          <button type='submit' >
             regete
           </button>
         </form></div></div>
