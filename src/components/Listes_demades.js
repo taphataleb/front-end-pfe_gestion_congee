@@ -7,7 +7,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 import { useNavigate, useParams } from 'react-router-dom';
-import { token } from '../Pages/Auth/authService';
+import { token } from './Auth/authService';
 import '../styles/Styles.css';
 
 function Liste_des_demande() {
@@ -34,7 +34,7 @@ function Liste_des_demande() {
     try {
       const headers = { 'Authorization': `Bearer ${localStorage.getItem('token')}` };
 
-
+      debugger
       const tokens = headers;
       console.log(tokens)
       const response = await axios.delete(`http://localhost:9000/demande/d`, {
@@ -54,6 +54,7 @@ function Liste_des_demande() {
       console.error('Erreur lors de la requête DELETE :', error);
     }
   };
+
 
   return (
 
