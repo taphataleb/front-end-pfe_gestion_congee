@@ -8,6 +8,8 @@ const DemandeConge = () => {
     const [dateFin,
         setDateFin] = useState("");
 
+    const [message, setMessage] = useState('');
+
     const handeleSaveDemande = async (e) => {
         e.preventDefault();
         let demande = {
@@ -26,10 +28,11 @@ const DemandeConge = () => {
             });
 
             // Faites quelque chose avec la réponse de Spring, si nécessaire
-            console.log(response.data);
+            setMessage(response.data)
         } catch (error) {
             console.error('Erreur lors de la requête POST :', error);
         }
+
     };
 
     return (
@@ -41,7 +44,7 @@ const DemandeConge = () => {
                 <h1>Demande de congé</h1>
                 <form onSubmit={handeleSaveDemande} >
 
-
+                    {message && <p>{message}</p>}
                     <div  >
                         <label>Date de début :</label>
                         <input type='date' value={dateDébut} onChange={(e) => setDateDébut(e.target.value)} required />
